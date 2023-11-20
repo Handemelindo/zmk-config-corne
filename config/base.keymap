@@ -11,10 +11,10 @@
 #include "../zmk-nodefree-config/international_chars/greek.dtsi"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
-#define DEF 0
-#define NAV 1
-#define FN 2
-#define NUM 3
+#define BASE 0
+#define LOW 1
+#define UP 2
+#define FUNC 3
 #define SYS 4
 #define UC 5
 #define MOUSE 6
@@ -241,8 +241,8 @@ ZMK_LAYER(base,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &mt LALT INS      &kp Q          &kp W          &kp F          &kp J          &kp DQT                   &kp UNDERSCORE &kp M          &kp V          &kp B          &bootloader     &mt RALT DEL   
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                   &kp ESC        &kp SPACE      &kp LPAR                  &kp LBRC       &kp BSPC       &kp ENTER
-                                                //    &lt up ESC     &lt low SPACE  &kp LPAR                  &kp LBRC       &lt low BSPC   &lt up ENTER
+                                                //    &kp ESC        &kp SPACE      &kp LPAR                  &kp LBRC       &kp BSPC       &kp ENTER
+                                                   &lt UP ESC     &lt LOW SPACE  &kp LPAR                  &kp LBRC       &lt LOW BSPC   &lt UP ENTER
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -255,7 +255,7 @@ ZMK_LAYER(low,
    &sk LALT          &kp AT         &kp COLON      &kp LBKT       &kp EXCL       &kp QMARK                 &kp BSLH       &kp TILDE      &kp PIPE       &kp AMPS       &kp RBKT        &sk RALT
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
                                                 //    &sk LSHIFT     &kp J          &kp RPAR                  &kp RBRC       &kp J          &sk RSHIFT
-                                                   &sk LSHIFT     &mo func       &kp RPAR                  &kp RBRC       &mo func       &sk RSHIFT
+                                                   &sk LSHIFT     &mo FUNC       &kp RPAR                  &kp RBRC       &mo FUNC       &sk RSHIFT
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -279,7 +279,7 @@ ZMK_LAYER(func,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &kp LALT          &kp F6         &kp F7         &kp F8         &kp F9         &kp F10                   &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp F12         &kp RALT
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                   &kp LSHIFT     &trans         &to 4                     &to 4          &trans         &kp RSHIFT
+                                                   &kp LSHIFT     &trans         &to SYS                   &to SYS        &trans         &kp RSHIFT
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -291,7 +291,7 @@ ZMK_LAYER(sys,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &sys_reset        &none          &none          &none          &none          &none                     &none          &none          &none          &none          &none           &sys_reset
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                   &none          &none          &to 0                     &to 0          &none          &none          
+                                                   &none          &none          &to BASE                  &to BASE       &none          &none          
                                             //    ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
