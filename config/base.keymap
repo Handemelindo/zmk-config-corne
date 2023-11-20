@@ -11,6 +11,14 @@
 #include "../zmk-nodefree-config/international_chars/greek.dtsi"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
+#define DEF 0
+#define NAV 1
+#define FN 2
+#define NUM 3
+#define SYS 4
+#define UC 5
+#define MOUSE 6
+
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -231,10 +239,10 @@ ZMK_LAYER(base,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &mt LCTRL TAB     &kp I          &kp E          &kp U          &kp A          &kp O                     &kp H          &kp L          &kp S          &kp T          &kp R           &mt RCTRL LCAPS
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
-   &mt LALT INS      &kp Q          &kp W          &kp F          &kp J          &kp DQT                   &kp UNDERSCORE &kp M          &kp V          &kp B          &bootloader     &mt RALT DEL   
+   &mt LALT INS      &kp Q          &kp W          &kp F          &kp J          &kp DQT                   &kp UNDERSCORE &kp M          &kp V          &kp B          &kp Z           &mt RALT DEL   
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
                                                    &kp ESC        &kp SPACE      &kp LPAR                  &kp LBRC       &kp BSPC       &kp ENTER
-                                                //    &lt UP ESC     &lt LOW SPACE  &kp LPAR                  &kp LBRC       &lt LOW BSPC   &lt UP ENTER
+                                                //    &lt up ESC     &lt low SPACE  &kp LPAR                  &kp LBRC       &lt low BSPC   &lt up ENTER
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -247,7 +255,7 @@ ZMK_LAYER(low,
    &sk LALT          &kp AT         &kp COLON      &kp LBKT       &kp EXCL       &kp QMARK                 &kp BSLH       &kp TILDE      &kp PIPE       &kp AMPS       &kp RBKT        &sk RALT
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
                                                    &sk LSHIFT     &kp J          &kp RPAR                  &kp RBRC       &kp J          &sk RSHIFT
-                                                //    &sk LSHIFT     &mo FUNC       &kp RPAR                  &kp RBRC       &mo FUNC       &sk RSHIFT
+                                                //    &sk LSHIFT     &mo func       &kp RPAR                  &kp RBRC       &mo func       &sk RSHIFT
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -271,8 +279,8 @@ ZMK_LAYER(nav,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &kp LALT          &kp F6         &kp F7         &kp F8         &kp F9         &kp F10                   &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp F12         &kp RALT
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                   &kp LSHIFT     &trans         &kp L                     &kp L          &trans         &kp RSHIFT
-                                                //    &kp LSHIFT     &trans         &to 4                     &to 4          &trans         &kp RSHIFT
+                                                //    &kp LSHIFT     &kp J          &kp J                     &kp J          &kp J          &kp RSHIFT
+                                                   &kp LSHIFT     &trans         &to 4                     &to 4          &trans         &kp RSHIFT
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -284,8 +292,7 @@ ZMK_LAYER(sys,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &sys_reset        &none          &none          &none          &none          &none                     &none          &none          &none          &none          &none           &sys_reset
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                   &none          &none          &kp L                     &kp L          &none          &none          
-                                                //    &none          &none          &to 0                     &to 0          &none          &none          
+                                                   &none          &none          &to 0                     &to 0          &none          &none          
                                             //    ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
