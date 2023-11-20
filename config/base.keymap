@@ -11,14 +11,6 @@
 #include "../zmk-nodefree-config/international_chars/greek.dtsi"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
-#define BASE 0
-#define LOW 1
-#define UP 2
-#define FUNC 3
-#define SYS 4
-#define UC 5
-#define MOUSE 6
-
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 #include "extra_keys.h"
