@@ -241,8 +241,8 @@ ZMK_LAYER(base,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &mt LALT INS      &kp Q          &kp W          &kp F          &kp J          &kp DQT                   &kp UNDERSCORE &kp M          &kp V          &kp B          &bootloader     &mt RALT DEL   
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                //    &kp ESC        &kp SPACE      &kp LPAR                  &kp LBRC       &kp BSPC       &kp ENTER
-                                                   &lt UP ESC     &lt LOW SPACE  &kp LPAR                  &kp LBRC       &lt LOW BSPC   &lt UP ENTER
+                                                   &kp ESC        &kp SPACE      &kp LPAR                  &kp LBRC       &kp BSPC       &kp ENTER
+                                                //    &lt UP ESC     &lt LOW SPACE  &kp LPAR                  &kp LBRC       &lt LOW BSPC   &lt UP ENTER
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
@@ -254,8 +254,8 @@ ZMK_LAYER(low,
 //├───────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼─────────────┤ ├───────────────┤
    &sk LALT          &kp AT         &kp COLON      &kp LBKT       &kp EXCL       &kp QMARK                 &kp BSLH       &kp TILDE      &kp PIPE       &kp AMPS       &kp RBKT        &sk RALT
 //├───────────────┤ ╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┴──────────────┼─────────────╯ ├───────────────┤
-                                                //    &sk LSHIFT     &kp J          &kp RPAR                  &kp RBRC       &kp J          &sk RSHIFT
-                                                   &sk LSHIFT     &mo FUNC       &kp RPAR                  &kp RBRC       &mo FUNC       &sk RSHIFT
+                                                   &sk LSHIFT     &kp J          &kp RPAR                  &kp RBRC       &kp J          &sk RSHIFT
+                                                //    &sk LSHIFT     &mo FUNC       &kp RPAR                  &kp RBRC       &mo FUNC       &sk RSHIFT
 //                                                ╰──────────────┼──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┼──────────────╯
 )
 
